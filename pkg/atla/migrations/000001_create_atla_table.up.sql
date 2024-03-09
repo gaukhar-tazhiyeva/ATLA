@@ -10,16 +10,17 @@ CREATE TABLE IF NOT EXISTS characters
     updated_at  timestamp(0) with time zone NOT NULL DEFAULT NOW()
 );
 
-CREATE TABLE IF NOT EXISTS menu
+CREATE TABLE IF NOT EXISTS episodes
 (
     id              bigserial PRIMARY KEY,
-    title           text                        NOT NULL,
-    air_date        date                        NOT NULL,
+    season_id       int                        NOT NULL,
+    title text NOT NULL,
+    character_id           int                        NOT NULL,
     created_at      timestamp(0) with time zone NOT NULL DEFAULT NOW(),
     updated_at      timestamp(0) with time zone NOT NULL DEFAULT NOW(),
 );
 
-CREATE TABLE IF NOT EXISTS characters_and_episodes
+/*CREATE TABLE IF NOT EXISTS characters_and_episodes
 (
     id         bigserial PRIMARY KEY,
     character_id     bigserial                        NOT NULL,
@@ -30,4 +31,4 @@ CREATE TABLE IF NOT EXISTS characters_and_episodes
         REFERENCES characters(id),
     FOREIGN KEY (episode_id)
         REFERENCES episodes(id)
-);
+);*/

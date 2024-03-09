@@ -1,3 +1,5 @@
+/*!!!!!!!!!!!!!!!!!! CRUD IN HANDLERS !!!!!!!!!!!!!!!!!!*/
+
 package model
 
 import (
