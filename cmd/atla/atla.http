@@ -1,11 +1,13 @@
-### Create Menu Item
-POST localhost:8081/api/v1/menus
+### Create Character Item
+POST localhost:8081/api/v1/characters
 Content-Type: application/json
 
 {
-  "title": "Fried Chicken",
-  "description": "Menu 1 description",
-  "nutritionValue": 100
+    "Name" : "AAng",
+    "Age" : 112,
+    "Gender" : "male",
+    "Status" : "alive",
+    "Nation" : "air"
 }
 
 > {%
@@ -14,8 +16,8 @@ Content-Type: application/json
     });
 %}
 
-### Get Menu Item
-GET localhost:8081/api/v1/menus/1
+### Get Character Item
+GET localhost:8081/api/v1/characters/1
 
 > {%
     client.test("Request executed successfully", function() {
@@ -24,11 +26,11 @@ GET localhost:8081/api/v1/menus/1
 %}
 
 ### Update Menu Item
-PUT localhost:8081/api/v1/menus/1
+PUT localhost:8081/api/v1/characters/1
 Content-Type: application/json
 
 {
-  "nutritionValue": 100
+  "Status" : "dead"
 }
 
 > {%
@@ -37,8 +39,8 @@ Content-Type: application/json
     });
 %}
 
-### Delete Menu Item
-DELETE localhost:8081/api/v1/menus/1
+### Delete Character Item
+DELETE localhost:8081/api/v1/characters/1
 Content-Type: application/json
 
 > {%
