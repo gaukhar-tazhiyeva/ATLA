@@ -3,6 +3,7 @@
 ## Members
 ```
 Gaaze Verena, 22B030332
+Tazhiyeva Gaukhar, 22B030591
 
 ```
 
